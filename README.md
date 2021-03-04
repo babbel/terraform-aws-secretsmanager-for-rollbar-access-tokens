@@ -42,5 +42,6 @@ resource "aws_ecs_task_definition" "example" {
 
   ...
 }
+```
 
 Please also make sure that you grant permissions on the `secretsmanager:GetSecretValue` action for the SecretsManager on the [ECS task execution IAM role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html).
