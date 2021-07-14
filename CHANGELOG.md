@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.2
+
+- [Output rollbar project](https://github.com/babbel/terraform-aws-secretsmanager-for-rollbar-access-tokens/pull/5)
+
+
 ## v1.0.1
 
 - [Fix Readme](https://github.com/babbel/terraform-aws-secretsmanager-for-rollbar-access-tokens/pull/2)
