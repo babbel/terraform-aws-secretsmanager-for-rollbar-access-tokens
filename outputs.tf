@@ -1,7 +1,7 @@
-output "rollbar_project_name" {
-  value = data.rollbar_project.this.name
+output "rollbar_project" {
+  value = data.rollbar_project.this
 
-  description = "The name of the Rollbar project."
+  description = "The Rollbar project."
 }
 
 output "secretsmanager_secret" {
