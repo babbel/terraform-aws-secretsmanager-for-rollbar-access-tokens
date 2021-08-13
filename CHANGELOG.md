@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.3
+
+- [Bump Rollbar provider dependency](https://github.com/babbel/terraform-aws-secretsmanager-for-rollbar-access-tokens/pull/8)
+
 ## v1.0.2
 
 - [Output rollbar project](https://github.com/babbel/terraform-aws-secretsmanager-for-rollbar-access-tokens/pull/5)
