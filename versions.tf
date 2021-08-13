@@ -8,7 +8,7 @@ terraform {
     }
     rollbar = {
       source  = "rollbar/rollbar"
-      version = "1.0.2"
+      version = "~> 1.0"
     }
   }
 }
