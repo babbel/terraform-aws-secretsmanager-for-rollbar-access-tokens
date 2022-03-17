@@ -1,6 +1,6 @@
 # Changelog
 
-## v2.0.0
+## v1.1.0
 
 - [Bump hashicorp/aws dependency](https://github.com/babbel/terraform-aws-secretsmanager-for-rollbar-access-tokens/pull/14)
 
