@@ -10,16 +10,18 @@ variable "rollbar_project_name" {
   description = "Name of the Rollbar project to load the project access tokens from."
 }
 
-variable "rollbar_access_token_names" {
-  type    = list(string)
-  default = ["post_server_item"]
-
-  description = "List of name of Rollbar access tokens which shall be loaded into the SecretsManager."
-}
-
 variable "tags" {
   type    = map(string)
   default = {}
 
   description = "Tags which will be assigned to all resources."
+}
+
+variable "rollbar_tokens" {
+  type = list(object({
+    name         = string
+    access_token = string
+  }))
+
+  description = "List of objects having access tokens names and the token values which shall be loaded into the SecretsManager."
 }
