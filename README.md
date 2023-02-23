@@ -14,7 +14,7 @@ module "secretsmanager-for-rollbar-access-tokens" {
   name_prefix = "example"
 
   rollbar_project_name       = "example"
-  rollbar_access_token_names = ["post_server_item"]
+  rollbar_tokens             = values(rollbar_project_access_token.example)[*]
 
   tags = {
     app = "example"
@@ -34,7 +34,7 @@ resource "aws_ecs_task_definition" "example" {
 
     secrets = [{
       name  = "ROLLBAR_ACCESS_TOKEN"
-      value = "${module.secretsmanager-for-rollbar-access-tokens.secretsmanager_secret.arn}:post_server_item::"
+      value = "${module.secretsmanager-for-rollbar-access-tokens.secretsmanager_secret.arn}:${rollbar_project_access_token.example.name}::"
     }]
 
     ...
