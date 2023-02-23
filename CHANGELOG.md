@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.0
+
+- [Replacing rollbar_access_token_names variable](https://github.com/babbel/terraform-aws-secretsmanager-for-rollbar-access-tokens/pull/20)
+
 ## v1.1.0
 
 - [Bump hashicorp/aws dependency](https://github.com/babbel/terraform-aws-secretsmanager-for-rollbar-access-tokens/pull/14)
