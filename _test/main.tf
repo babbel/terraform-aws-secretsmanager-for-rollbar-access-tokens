@@ -2,13 +2,25 @@ provider "aws" {
   region = "locale"
 }
 
+locals {
+  rollbar_tokens = [
+    {
+      name         = "example"
+      access_token = "example"
+    },
+    {
+      name         = "example2"
+      access_token = "example2"
+    }
+  ]
+}
+
 module "secretsmanager" {
   source = "./.."
 
   name_prefix = "example"
 
-  rollbar_project_name       = "example"
-  rollbar_access_token_names = ["post_server_item"]
+  rollbar_tokens = local.rollbar_tokens
 
   tags = {
     app = "example"

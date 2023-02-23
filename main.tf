@@ -5,22 +5,11 @@ resource "aws_secretsmanager_secret" "this" {
   tags = var.tags
 }
 
-data "rollbar_project" "this" {
-  name = var.rollbar_project_name
-}
-
-data "rollbar_project_access_token" "this" {
-  for_each = toset(var.rollbar_access_token_names)
-
-  project_id = data.rollbar_project.this.id
-  name       = each.value
-}
-
 resource "aws_secretsmanager_secret_version" "this" {
   secret_id = aws_secretsmanager_secret.this.arn
 
   secret_string = jsonencode({
-    for rollbar_access_token_name, rollbar_access_token in data.rollbar_project_access_token.this :
-    rollbar_access_token_name => rollbar_access_token.access_token
+    for rollbar_token in var.rollbar_tokens :
+    rollbar_token.name => rollbar_token.access_token
   })
 }
