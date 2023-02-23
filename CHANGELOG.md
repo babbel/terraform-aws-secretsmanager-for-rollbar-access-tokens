@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.1
+
+- [Fix Readme](https://github.com/babbel/terraform-aws-secretsmanager-for-rollbar-access-tokens/pull/21)
+
 ## v2.0.0
 
 - [Replacing rollbar_access_token_names variable](https://github.com/babbel/terraform-aws-secretsmanager-for-rollbar-access-tokens/pull/20)
