@@ -20,7 +20,6 @@ module "secretsmanager" {
 
   name_prefix = "example"
 
-  rollbar_project_name = "example"
   rollbar_tokens       = local.rollbar_tokens
 
   tags = {

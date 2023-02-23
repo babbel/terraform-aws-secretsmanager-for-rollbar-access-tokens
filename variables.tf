@@ -4,12 +4,6 @@ variable "name_prefix" {
   description = "Name prefix for the SecretsManager. The full name will be $${var.name_prefix}.rollbar_access_tokens."
 }
 
-variable "rollbar_project_name" {
-  type = string
-
-  description = "Name of the Rollbar project to load the project access tokens from."
-}
-
 variable "tags" {
   type    = map(string)
   default = {}
