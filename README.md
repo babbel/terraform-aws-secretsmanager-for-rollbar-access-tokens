@@ -13,8 +13,7 @@ module "secretsmanager-for-rollbar-access-tokens" {
 
   name_prefix = "example"
 
-  rollbar_project_name       = "example"
-  rollbar_tokens             = values(rollbar_project_access_token.example)
+  rollbar_tokens = values(rollbar_project_access_token.example)
 
   tags = {
     app = "example"
