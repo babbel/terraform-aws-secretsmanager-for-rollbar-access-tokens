@@ -9,7 +9,7 @@ This is useful in order to load the Rollbar project access tokens into ECS via [
 ```tf
 module "secretsmanager-for-rollbar-access-tokens" {
   source  = "babbel/secretsmanager-for-rollbar-access-tokens/aws"
-  version = "~> 1.1"
+  version = "~> 2.1"
 
   name_prefix = "example"
 

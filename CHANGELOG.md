@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.1.0
+
+- [Relax version constraints for modules](https://github.com/babbel/terraform-aws-secretsmanager-for-rollbar-access-tokens/pull/24)
+
 ## v2.0.1
 
 - [Fix Readme](https://github.com/babbel/terraform-aws-secretsmanager-for-rollbar-access-tokens/pull/21)
