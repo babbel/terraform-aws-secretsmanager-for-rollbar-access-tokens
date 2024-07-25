@@ -1,4 +1,7 @@
-# Changelog
+# NOTE: CHANGELOG.md is deprecated
+
+After the release of v2.1.0, please see the [GitHub release notes](https://github.com/babbel/terraform-aws-secretsmanager-for-rollbar-access-tokens/releases)
+for the module in order to view the most up-to-date changes.
 
 ## v2.1.0
 
