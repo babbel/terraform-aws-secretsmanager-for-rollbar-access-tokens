@@ -22,7 +22,7 @@ module "secretsmanager" {
 
   rollbar_tokens = local.rollbar_tokens
 
-  tags = {
+  default_tags = {
     app = "example"
     env = "production"
   }
