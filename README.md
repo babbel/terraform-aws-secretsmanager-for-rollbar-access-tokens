@@ -14,11 +14,6 @@ module "secretsmanager-for-rollbar-access-tokens" {
   name_prefix = "example"
 
   rollbar_tokens = values(rollbar_project_access_token.example)
-
-  tags = {
-    app = "example"
-    env = "production"
-  }
 }
 ```
 
