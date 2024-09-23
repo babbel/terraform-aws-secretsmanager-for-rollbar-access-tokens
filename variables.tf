@@ -25,3 +25,12 @@ variable "rollbar_tokens" {
 List of objects having access tokens names and the token values which shall be loaded into the SecretsManager.
 EOS
 }
+
+variable "secretsmanager_secret_tags" {
+  type    = map(string)
+  default = {}
+
+  description = <<EOS
+Map of tags assigned to the SecretsManager secret.
+EOS
+}
