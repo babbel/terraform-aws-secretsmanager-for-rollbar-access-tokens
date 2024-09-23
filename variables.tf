@@ -1,3 +1,12 @@
+variable "default_tags" {
+  type    = map(string)
+  default = {}
+
+  description = <<EOS
+Map of tags assigned to all AWS resources created by this module.
+EOS
+}
+
 variable "name_prefix" {
   type = string
 
@@ -14,14 +23,5 @@ variable "rollbar_tokens" {
 
   description = <<EOS
 List of objects having access tokens names and the token values which shall be loaded into the SecretsManager.
-EOS
-}
-
-variable "tags" {
-  type    = map(string)
-  default = {}
-
-  description = <<EOS
-Map of tags assigned to all AWS resources created by this module.
 EOS
 }
