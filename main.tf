@@ -2,7 +2,7 @@ resource "aws_secretsmanager_secret" "this" {
   name        = "${var.name_prefix}.rollbar_access_tokens"
   description = "Secret value is managed via Terraform"
 
-  tags = var.default_tags
+  tags = merge(var.default_tags, var.secretsmanager_secret_tags)
 }
 
 resource "aws_secretsmanager_secret_version" "this" {
