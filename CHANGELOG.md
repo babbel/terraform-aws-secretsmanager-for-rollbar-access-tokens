@@ -27,7 +27,6 @@ for the module in order to view the most up-to-date changes.
 
 - [Output rollbar project](https://github.com/babbel/terraform-aws-secretsmanager-for-rollbar-access-tokens/pull/5)
 
-
 ## v1.0.1
 
 - [Fix Readme](https://github.com/babbel/terraform-aws-secretsmanager-for-rollbar-access-tokens/pull/2)
