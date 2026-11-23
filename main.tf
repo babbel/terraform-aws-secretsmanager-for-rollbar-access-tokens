@@ -8,8 +8,11 @@ resource "aws_secretsmanager_secret" "this" {
 resource "aws_secretsmanager_secret_version" "this" {
   secret_id = aws_secretsmanager_secret.this.arn
 
-  secret_string = jsonencode({
+  # Write-only: the tokens are not stored in the state of this resource, and
+  # refreshing it does not read the secret value.
+  secret_string_wo = jsonencode({
     for rollbar_token in var.rollbar_tokens :
     rollbar_token.name => rollbar_token.access_token
   })
+  secret_string_wo_version = var.secret_string_wo_version
 }

@@ -26,6 +26,15 @@ List of objects having access tokens names and the token values which shall be l
 EOS
 }
 
+variable "secret_string_wo_version" {
+  type    = number
+  default = 1
+
+  description = <<EOS
+Version of the secret value. Terraform does not compare a write-only value with the stored secret, so changes of `var.rollbar_tokens` are only written when this number changes. Increase it whenever a token is added, removed or replaced.
+EOS
+}
+
 variable "secretsmanager_secret_tags" {
   type    = map(string)
   default = {}
